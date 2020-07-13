@@ -15,7 +15,32 @@ body, html {
   padding: 0;
 }
 
+.delete{
+  display: none;
+  background-color: white;
+  width:140px;
+  height: 60px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.2);
+}
 
+span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hide{
+  display: none;
+}
 
 .all-conteiner{
   background-image: url('../img/bb.png');
@@ -46,6 +71,13 @@ ul{
   align-items: center;
   margin-bottom: 10px;
   padding-right: 50px;
+  position: relative;
+}
+
+.delete{
+  position: absolute;
+  right: 30px;
+  top: 20px;
 }
 
 .my-green-answer{
