@@ -1,11 +1,33 @@
+// $(document).ready(function(){
+//   var templateGreen = $('.my-li-green').clone().html();
+//
+//
+//   $('#invia').click(function() {
+//
+//     var myInput = $('#input').val();
+//     $('.my-list').append(templateGreen);
+//     $('.my-green-answer').html(myInput);
+//   });
+//
+// }
+// );
+
+
+
+
 $(document).ready(function(){
-  //importante aggiungere anche html senno aggiunge solo una volta (è come outer html)
-  var templateWhite = $('.my-li-white').clone().html();
-  var templateGreen = $('.my-li-green').clone().html();
-  console.log(templateGreen, templateWhite);
+
+  var templateGreen = $('.my-li-green').clone();
+  // templateGreen.text();
+
+  console.log(templateGreen);
 
   $('#invia').click(function() {
-    $('.my-list').append(templateGreen);
+    var prova = templateGreen;
+    var myInput = $('#input').val();
+    $('.my-list').append(prova);
+    $('.my-green-answer').html(myInput);
   });
+
 }
 );

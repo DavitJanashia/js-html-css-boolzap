@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin:0;
   /* DEBUG:  */
-  border:1px solid black;
+  /* border:1px solid black; */
   padding:5px;
 }
 
@@ -12,6 +12,14 @@ body, html {
   font-family: arial, monospace;
   overflow-x: hidden;
   overflow-y: auto;
+  padding: 0;
+}
+
+.all-conteiner{
+  background-image: url('../img/bb.png');
+  width: 100%;
+  height: 100%;
+  padding: 40px;
 }
 
 ul{
@@ -34,19 +42,36 @@ ul{
 }
 
 .my-green-answer{
-  width: 100px;
   height: 50px;
+  border-radius: 8px;
+  background-color: #dcf7c0;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .my-invia{
   display: flex;
   position: fixed;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 70px;
+  background-color: #f2eeea;
+  z-index: 999;
+
+}
+
+input{
+  border-radius: 6px;
+  width: 80%;
+  height: 90%;
+  border: none;
 }
 
 
