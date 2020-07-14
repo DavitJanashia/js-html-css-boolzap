@@ -176,6 +176,10 @@ header{
   overflow: hidden;
 }
 
+.his-profile-pic {
+  margin-right: 15px;
+}
+
 .his-prof-left{
   display: flex;
   align-items: center;
