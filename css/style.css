@@ -185,6 +185,19 @@ header{
   align-items: center;
 }
 
+.his-prof-text{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.his-prof-text span:last-child{
+  color: #6c7376;
+  font-size: 13.5px;
+  margin-top: 5px;
+}
+
 
 /* template */
 .my-li-green{
