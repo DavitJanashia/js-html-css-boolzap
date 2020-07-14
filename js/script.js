@@ -17,9 +17,9 @@ $(document).ready(function(){
       //*** selezionare il messaggio // IMPORTANTE: DEVO SELEZIONARE PER FORZA DENTRO QUESTA FUNZIONE SENNO NON VEDE
       $('ul .my-green').click(function () {
         // console.log('ciao');
-        $(this).children('.delete').addClass('show');
+        $(this).siblings('.delete').addClass('show');
         // con click cancello
-        $(this).children('.delete').click(function () {
+        $(this).siblings('.delete').click(function () {
           // console.log($(this).parent());
           $(this).parent().hide();
         });
@@ -52,9 +52,9 @@ $(document).ready(function(){
     //*** selezionare il messaggio // IMPORTANTE: DEVO SELEZIONARE PER FORZA DENTRO QUESTA FUNZIONE SENNO NON VEDE
     $('ul .my-green').click(function () {
       // console.log('ciao');
-      $(this).children('.delete').addClass('show');
+      $(this).siblings('.delete').addClass('show');
       // con click cancello
-      $(this).children('.delete').click(function () {
+      $(this).siblings('.delete').click(function () {
         // console.log($(this).parent());
         $(this).parent().hide();
       });

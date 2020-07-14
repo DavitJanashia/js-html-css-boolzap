@@ -15,6 +15,45 @@ body, html {
   padding: 0;
 }
 
+.background{
+  z-index: -2;
+  background-color: #dadbd4;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+header{
+  background-color: #409388;
+  width: 100%;
+  height: 150px;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+.my-profile, .his-profile{
+  width: 100%;
+  height: 70px;
+  background-color: #eaeaea;
+}
+
+
+.my-profile-pic, .his-profile-pic {
+  width: 50px;
+  height: 50px;
+}
+
+.other-prof-pic{
+  width: 60px;
+  height: 60px;
+}
+.my-li-green{
+  position: relative;
+}
+
 .delete{
   display: none;
   background-color: white;
@@ -23,6 +62,7 @@ body, html {
   border: none;
   border-radius: 5px;
   box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 span{
@@ -41,12 +81,26 @@ span{
 .hide{
   display: none;
 }
+.all-container{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  height: calc(100vh - 30px);
+  margin-top: 30px;
+}
 
-.all-conteiner{
+.left-container{
+  background-color: white;
+  width: 30%;
+  height: 100%;
+}
+
+.right-container{
   background-image: url('../img/bb.png');
-  width: 100%;
-  height: 100vh;
+  width: 70%;
+  height: 100%;
   background-attachment: fixed;
+  position: relative;
 }
 
 ul{
@@ -55,8 +109,9 @@ ul{
   margin: 0;
   position: relative;
   overflow-x: hidden;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 170px);
   overflow-y: auto;
+  padding-top: 10px;
 }
 
 .my-template{
@@ -117,7 +172,7 @@ ul{
 
 .my-invia{
   display: flex;
-  position: fixed;
+  position: absolute;
   justify-content: space-around;
   align-items: center;
   bottom: 0;
