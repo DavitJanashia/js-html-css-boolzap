@@ -18,6 +18,7 @@ body, html {
 .background{
   z-index: -2;
   background-color: #dadbd4;
+  background-repeat: repeat;
   position: fixed;
   top:0;
   left: 0;

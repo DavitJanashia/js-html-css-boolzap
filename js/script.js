@@ -75,6 +75,23 @@ $(document).ready(function(){
     }
   });
 
+
+// fatto ricerca su internet e fatto un po di modifiche (da capire bene come funziona)
+  $("#input-search").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    //da capire bene come funzione FILTER
+    $("#my-other-prof-ul .names").filter(function() {
+      //questa condizione da capire MOLTO BENE $(this).text().toLowerCase().indexOf(value) > -1)
+      if($(this).text().toLowerCase().indexOf(value) > -1){
+        $(this).parent().parent().parent().show();
+      } else{
+        $(this).parent().parent().parent().hide();
+      }
+
+    });
+  });
+
+
   //qua finisce la funzione del document ready
 }
 );
