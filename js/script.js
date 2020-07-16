@@ -1,6 +1,7 @@
 // riogranizzare il codice in modo piu pulito
 // capire come appendere i messaggi con invio, speficamente al ul con data-id selezionato
 // come cancellare il testo dentro input quando clicco invio?
+// con click su answers deve apparire delete
 // gestire scrollbar
 
 
