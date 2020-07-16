@@ -3,6 +3,20 @@
 // come cancellare il testo dentro input quando clicco invio?
 // con click su answers appare delete, ma quando clicco su altri posti deve scomparire (COME?)
 // ho fatto scrollbar display: none, non funziona in firefox, su chrome si
+//*****************
+// le cose da capire bene
+// 1. this
+// 2. filter()
+// 3. alcuni condizioni per esempio indexOf(value) > -1 ecc.
+//*****************
+//domande
+// 1. perche in safari css su search non aveva influenzato?
+// 2. con click su answers appare delete, ma quando clicco su altri posti deve scomparire (COME?)
+// 3. come cancellare il testo dentro input quando clicco invio?
+// 4. ho fatto scrollbar display: none, non funziona in firefox, su chrome si (come si puo risolvere?)
+// 5. capire come appendere i messaggi con invio, speficamente al ul con data-id selezionato
+
+
 
 
 
