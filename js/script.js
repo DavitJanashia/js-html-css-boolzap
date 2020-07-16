@@ -2,7 +2,7 @@
 // capire come appendere i messaggi con invio, speficamente al ul con data-id selezionato
 // come cancellare il testo dentro input quando clicco invio?
 // con click su answers appare delete, ma quando clicco su altri posti deve scomparire (COME?)
-// gestire scrollbar
+// ho fatto scrollbar display: none, non funziona in firefox, su chrome si
 
 
 

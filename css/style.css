@@ -265,6 +265,14 @@ ul{
   padding-top: 10px;
 }
 
+
+
+
+.my-list::-webkit-scrollbar{
+  display: none;
+}
+
+
 .my-template{
   display: none;
 }
