@@ -4,9 +4,11 @@
 // 3. su click anche della risposta deve comparire Delete
 // 4. search
 // 5. selezionare
-// 6. CSS: COME GESTIRE SCROLLBAR????
-
-
+// 6. CSS: COME GESTIRE SCROLLBAR?
+// da fare
+// riogranizzare il codice in modo piu pulito
+// capire come appendere i messaggi con invio, speficamente al ul con data-id selezionato
+// gestire scrollbar
 
 
 
