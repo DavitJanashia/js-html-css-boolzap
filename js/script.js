@@ -1,14 +1,8 @@
-// da sistemare il codice come abbiamo fatto stamattina:
-// 1. creare funzione che invia il messaggio
-// 2. chiamare questa funzione dentro il bottone e dentro tasto invio
-// 3. su click anche della risposta deve comparire Delete
-// 4. search
-// 5. selezionare
-// 6. CSS: COME GESTIRE SCROLLBAR?
-// da fare
 // riogranizzare il codice in modo piu pulito
 // capire come appendere i messaggi con invio, speficamente al ul con data-id selezionato
+// come cancellare il testo dentro input quando clicco invio?
 // gestire scrollbar
+
 
 
 
