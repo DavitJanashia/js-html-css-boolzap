@@ -1,14 +1,25 @@
 // riogranizzare il codice in modo piu pulito
 // capire come appendere i messaggi con invio, speficamente al ul con data-id selezionato
 // come cancellare il testo dentro input quando clicco invio?
-// con click su answers deve apparire delete
+// con click su answers appare delete, ma quando clicco su altri posti deve scomparire (COME?)
 // gestire scrollbar
 
 
 
-
-
 $(document).ready(function(){
+
+  // ************************************
+  // da sistemare questo codice di ON CLICK
+  $(document).on('click', '.my-white', function () {
+    var answer = $(this);
+    answer.siblings('.delete2').addClass('show');
+    answer.siblings('.delete2').click(function () {
+      // console.log($(this).parent());
+      answer.parent().remove();
+    });
+
+  } );
+  // ************************************
 
   // devo separare in html le conversazioni dei diversi profile
 
@@ -34,7 +45,6 @@ $(document).ready(function(){
     console.log(selectedUl);
     // 3. aggiungo active-l AL selectedUl PER RENDERE VISIBILE
     selectedUl.addClass('active-l');
-
 
   });
 
@@ -67,7 +77,7 @@ $(document).ready(function(){
         // con click cancello
         $(this).siblings('.delete').click(function () {
           // console.log($(this).parent());
-          $(this).parent().hide();
+          $(this).parent().remove();
         });
 
       });
@@ -110,7 +120,7 @@ $(document).ready(function(){
         // con click cancello
         $(this).siblings('.delete').click(function () {
           // console.log($(this).parent());
-          $(this).parent().hide();
+          $(this).parent().remove();
         });
 
       });
