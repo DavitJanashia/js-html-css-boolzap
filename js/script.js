@@ -8,13 +8,18 @@
 // 1. this
 // 2. filter()
 // 3. alcuni condizioni per esempio indexOf(value) > -1 ecc.
+// 4. COMBINAZIONE DI CLONE E THIS
+// 5. funzioni dentro funzioni (catena delle funzioni)
 //*****************
-//domande
+// domande
 // 1. perche in safari css su search non aveva influenzato?
 // 2. con click su answers appare delete, ma quando clicco su altri posti deve scomparire (COME?)
 // 3. come cancellare il testo dentro input quando clicco invio?
 // 4. ho fatto scrollbar display: none, non funziona in firefox, su chrome si (come si puo risolvere?)
-// 5. capire come appendere i messaggi con invio, speficamente al ul con data-id selezionato
+// 5. capire come appendere i messaggi con invio, speficamente al ul con DATA-ID selezionato
+//*****************
+// esercizi da fare (mio)
+// 1. fare uno schema delle funzioni dentro funzioni per capire bene la struttura
 
 
 
@@ -22,8 +27,8 @@
 
 $(document).ready(function(){
 
-  // ************************************
-  // da sistemare questo codice di ON CLICK
+
+  //  ON CLICK con selezione document ogni volta che clicchi guarda tutti gli elementi nel html ( o body) e fa azione su quel elemento
   $(document).on('click', '.my-white', function () {
     var answer = $(this);
     answer.siblings('.delete2').addClass('show');
@@ -33,7 +38,6 @@ $(document).ready(function(){
     });
 
   } );
-  // ************************************
 
   // devo separare in html le conversazioni dei diversi profile
 
@@ -56,7 +60,7 @@ $(document).ready(function(){
     // 2. salvo nella variabile selected ul LA SELEZIONE DELL ELEMENTO CON LO STESSO DATA-ID DEL OTHER PROFILE CHE HO CLICCATO
 
     var selectedUl = $('.my-list[data-id=' + id +']');
-    console.log(selectedUl);
+    // console.log(selectedUl);
     // 3. aggiungo active-l AL selectedUl PER RENDERE VISIBILE
     selectedUl.addClass('active-l');
 
@@ -79,12 +83,12 @@ $(document).ready(function(){
       //faccio le modifiche del elemento nipote del clone selezionato.. occhio che io faccio la modifica proprio su un elemento dentro CLONE, e non sul elemento originale
       templateGreen.find('.my-green-answer').html(myInput);
       //aggiungo con click dentro ul
-      //OCCHIO: QUI MI SERVE IN QUALCHE MODO USARE DATA ID PERCHE LO SCHERMO ATTIVO IN QUEL MOMENTO NON MI SEMBRA MOLTO AFFIDABILE (COME USARE?)
+      //OCCHIO: QUI MI SERVE IN QUALCHE MODO USARE DATA ID PERCHE LO SCHERMO ATTIVO IN QUEL MOMENTO (cioe active-l) NON MI SEMBRA MOLTO AFFIDABILE (COME FARE?)
       $('.my-list.active-l').append(templateGreen);
       // dopo tot secondi appare la risposta
       setTimeout(answers, 1000);
       // con il click al messaggio si appare una finestra con delete,
-      //*** selezionare il messaggio // IMPORTANTE: DEVO SELEZIONARE PER FORZA DENTRO QUESTA FUNZIONE SENNO NON VEDE
+      //*** selezionare il messaggio // IMPORTANTE: DEVO SELEZIONARE PER FORZA DENTRO QUESTA FUNZIONE SENNO NON VEDE (o in alternativa usare $(document).on('click', selettore, funzione) cosi si puo mettere anche fuori)
       $('ul .my-green').click(function () {
         // console.log('ciao');
         $(this).siblings('.delete').addClass('show');
@@ -105,7 +109,7 @@ $(document).ready(function(){
     // $('.my-list').append('ciao');
     var templateWhite = $('.my-template .my-li-white').clone();
     templateWhite.find('.my-white-answer').html('OK! :)');
-    //OCCHIO: QUI MI SERVE IN QUALCHE MODO USARE DATA ID PERCHE SE IO SELEZIONO UN ALTRO PROFILE PRIMA DI SET TIMEOUT MI AGGIUNGE SU UL ATTIVO IN QUEL MOMENTO (COME USARE?)
+    //OCCHIO: QUI MI SERVE IN QUALCHE MODO USARE DATA ID PERCHE SE IO SELEZIONO UN ALTRO PROFILE PRIMA DI SET TIMEOUT MI AGGIUNGE SU 'UL' ATTIVO IN QUEL MOMENTO (COME FARE?)
     $('.my-list.active-l').append(templateWhite);
   }
 
